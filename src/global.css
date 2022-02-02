@@ -1,0 +1,12 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  /* font-family: "Comfortaa", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
