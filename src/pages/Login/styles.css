@@ -1,0 +1,32 @@
+.container-master {
+  /* background-image: url("../../assets/backgroundlogin.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logon-container {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logon-container section.form {
+  width: 50%;
+  display: flex;
+  position: relative;
+  top: 150px;
+}
+
+.logon-container section.form form h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.logon-container section.form form button {
+  margin-bottom: 40px;
+}
