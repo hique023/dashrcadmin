@@ -1,0 +1,31 @@
+.containerNotfound {
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerNotfound .contentNotfound {
+  margin: auto;
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerNotfound .contentNotfound h1 {
+  font-size: 40px;
+  color: var(--green-soft);
+  margin-bottom: 20px;
+}
+
+.containerNotfound .contentNotfound h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.containerNotfound .contentNotfound h3 {
+  font-size: 18px;
+  color: var(--white);
+}
