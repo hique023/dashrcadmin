@@ -6,8 +6,11 @@ import "./styles.css";
 
 export default function User() {
   return (
-    <div className="loginContainer">
-      <h1>User</h1>
+    <div className="UserContainer">
+      <div className="UserContent">
+        <h1>Name: Nome Teste</h1>
+        <h1>Email: nometeste@teste.com</h1>
+      </div>
     </div>
   );
 }

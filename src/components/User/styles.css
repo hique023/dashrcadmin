@@ -1,0 +1,9 @@
+.UserContainer .UserContent {
+  background-color: rgb(79, 181, 125);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.UserContainer .UserContent h1 {
+  font-size: 25px;
+}
