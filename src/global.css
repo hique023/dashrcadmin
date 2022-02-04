@@ -9,6 +9,7 @@
   font-family: "Comfortaa", sans-serif;
   /* font-family: "Roboto", sans-serif; */
   font-weight: 100;
+  color: var(--white);
 }
 
 :root {
