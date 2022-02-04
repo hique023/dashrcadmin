@@ -6,4 +6,14 @@
 
 .UserContainer .UserContent h1 {
   font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.UserContainer .UserContent .editUser {
+  position: relative;
+  right: -440px;
+  top: 5px;
+  background: transparent;
+  border: 0;
+  font-size: 0px;
 }
