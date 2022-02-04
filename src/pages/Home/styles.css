@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.homeContainer .button {
+  background-color: var(--green-soft);
+  margin-bottom: 10px;
+}
+
 .homeContainer .homeContent {
   width: 100%;
   display: grid;
