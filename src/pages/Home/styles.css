@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
 
-  padding: 20px;
+  padding: 50px 100px;
 
   display: column;
   justify-content: center;
@@ -17,6 +17,6 @@
 .homeContainer .homeContent {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }

@@ -1,0 +1,20 @@
+.addUserContainer {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px 100px;
+
+  display: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addUserContainer .button {
+  background-color: var(--green-soft);
+  margin-bottom: 10px;
+}
+
+.addUserContainer .addUserContent {
+  width: 100%;
+  display: flex;
+}

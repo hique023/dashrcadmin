@@ -2,17 +2,18 @@
   background-color: var(--green-soft);
   padding: 15px;
   border-radius: 10px;
+  max-width: 550px;
 }
 
 .UserContainer .UserContent h1 {
   font-size: 25px;
-  margin-bottom: 8px;
+  margin: 10px 0px;
 }
 
 .UserContainer .UserContent .editUser {
   position: relative;
-  right: -440px;
-  top: 5px;
+  right: -2px;
+  top: 0px;
   background: transparent;
   border: 0;
   font-size: 0px;

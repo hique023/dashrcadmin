@@ -7,9 +7,9 @@ import "./styles.css";
 
 export default function AddUser() {
   return (
-    <div className="homeContainer">
+    <div className="addUserContainer">
       <TopBar name="Add User" />
-      <div className="homeContent">
+      <div className="addUserContent">
         <h1>Add user</h1>
         <h1>Add user</h1>
         <h1>Add user</h1>
