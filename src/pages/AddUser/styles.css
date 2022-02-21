@@ -17,4 +17,39 @@
 .addUserContainer .addUserContent {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addUserContainer .addUserContent form .checkboxActive {
+  margin-top: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.addUserContainer .addUserContent form .checkboxActive #textAnalist {
+  width: 200px;
+}
+
+.addUserContainer .addUserContent form .checkboxActive h1 {
+  width: 110px;
+}
+
+.addUserContainer .addUserContent form .checkboxActive input {
+  margin: 0px;
+  height: 30px;
+}
+
+.addUserContainer .addUserContent form .checkboxActive .checkboxActiveYes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.addUserContainer .addUserContent form .checkboxActive .checkboxActiveNo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

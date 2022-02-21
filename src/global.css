@@ -37,8 +37,8 @@ body {
 
 input,
 button,
-textarea {
-  /* font: 300 18px "Roboto", sans-serif; */
+textarea,
+select {
   font: 300 18px "Comfortaa", sans-serif;
 }
 
@@ -68,8 +68,11 @@ form select {
   border-radius: 8px;
   padding: 0 24px;
   margin-top: 8px;
-  /* font: 12px "Roboto", sans-serif; */
-  font: 12px "Comfortaa", sans-serif;
+}
+
+form select option {
+  color: #333;
+  border-radius: 30px;
 }
 
 form textarea {
