@@ -24,11 +24,7 @@ export default function Home() {
         </button>
       </form>
       <div className="homeContent">
-        <User />
-        <User />
-        <User />
-        <User />
-        <User />
+        <User name="Pedro" email="a@a" active="true" />
       </div>
     </div>
   );

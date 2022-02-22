@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./styles.css";
 import { FiEdit } from "react-icons/fi";
 
-export default function User() {
+export default function User(props) {
   const navigate = useNavigate();
 
   function editUser(e) {
@@ -22,8 +22,9 @@ export default function User() {
             <FiEdit size={20} color="var(--edit)" />
           </button>
         </form>
-        <h1>Name: Nome Teste</h1>
-        <h1>Email: nometeste@teste.com</h1>
+        <h1>Name: {props.name}</h1>
+        <h1>Email: {props.email}</h1>
+        <h1>Ativo: {props.active}</h1>
       </div>
     </div>
   );
