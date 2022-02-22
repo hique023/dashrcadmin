@@ -112,7 +112,8 @@ form textarea {
   align-items: center;
   /* margin-top: 40px; */
   /* color: #41414d; */
-  color: var(--white);
+  color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   font-size: 18px;
   text-decoration: none;
   font-weight: 500;
