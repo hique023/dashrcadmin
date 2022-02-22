@@ -29,19 +29,19 @@
 }
 
 .addUserContainer .addUserContent form .checkboxActive #textAnalist {
-  width: 200px;
+  width: 180px;
 }
 
-.addUserContainer .addUserContent form .checkboxActive h1 {
-  width: 110px;
-}
+/* .addUserContainer .addUserContent form .checkboxActive h1 {
+  width: 280px;
+} */
 
-.addUserContainer .addUserContent form .checkboxActive input {
+/* .addUserContainer .addUserContent form .checkboxActive input {
   margin: 0px;
   height: 30px;
-}
+} */
 
-.addUserContainer .addUserContent form .checkboxActive .checkboxActiveYes {
+/* .addUserContainer .addUserContent form .checkboxActive .checkboxActiveYes {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,4 +52,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
