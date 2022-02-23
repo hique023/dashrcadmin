@@ -19,7 +19,7 @@ export default function Home() {
     navigate("/adduser");
   }
 
-  function getuser() {
+  function getUser() {
     const count = [];
 
     db.collection("users")
@@ -42,7 +42,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    getuser();
+    getUser();
     console.log("Teste");
   }, []);
 
@@ -57,7 +57,12 @@ export default function Home() {
       <div className="homeContent">
         {user.data.map((item, key) => (
           <div key={key}>
-            <User name={item.name} email={item.email} active={item.active} />
+            <User
+              name={item.name}
+              email={item.email}
+              active={item.active}
+              getUsers={getUser}
+            />
           </div>
         ))}
       </div>

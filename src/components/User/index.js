@@ -22,6 +22,7 @@ export default function User(props) {
     localStorage.setItem("emailUser", props.email);
     console.log("Usuário deletado");
     db.collection("users").doc(localStorage.getItem("emailUser")).delete();
+    props.getUsers();
   }
 
   function changeActive() {
