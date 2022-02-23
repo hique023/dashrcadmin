@@ -11,9 +11,23 @@
   margin: 10px 0px;
 }
 
+.UserContainer .userContent .forms {
+  display: flex;
+  align-items: center;
+}
+
 .UserContainer .UserContent .editUser {
   position: relative;
   right: -2px;
+  top: 0px;
+  background: transparent;
+  border: 0;
+  font-size: 0px;
+}
+
+.UserContainer .UserContent .deleteUser {
+  position: relative;
+  right: -15px;
   top: 0px;
   background: transparent;
   border: 0;
