@@ -1,6 +1,7 @@
 // Global
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import firebase from "../../firebaseConfig.js";
 
 // Styles
 import "./styles.css";
@@ -10,21 +11,22 @@ import { BsTrash } from "react-icons/bs";
 export default function User(props) {
   const [active, setActive] = useState();
   const navigate = useNavigate();
+  const db = firebase.firestore();
 
-  function editUser(e) {
-    e.preventDefault();
+  function editUser() {
     localStorage.setItem("emailUser", props.email);
     navigate("/edituser");
   }
 
-  function deleteUser(e) {
-    e.preventDefault();
+  function deleteUser() {
+    localStorage.setItem("emailUser", props.email);
     console.log("Usuário deletado");
+    db.collection("users").doc(localStorage.getItem("emailUser")).delete();
   }
 
   function changeActive() {
-    console.log("Tipo de active: " + typeof props.active);
-    console.log(props.active);
+    // console.log("Tipo de active: " + typeof props.active);
+    // console.log(props.active);
 
     props.active === true ? setActive("Sim") : setActive("Não");
   }
