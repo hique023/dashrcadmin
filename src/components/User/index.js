@@ -11,6 +11,9 @@ export default function User(props) {
 
   function editUser(e) {
     e.preventDefault();
+    localStorage.setItem("emailUser", props.email);
+    console.log("Tipo de active" + typeof props.active);
+    console.log(props.active);
     navigate("/edituser");
   }
 
