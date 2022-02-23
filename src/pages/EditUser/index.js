@@ -1,5 +1,5 @@
 // Global
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopBar from "../../components/TopBar";
 import firebase from "../../firebaseConfig.js";
 
@@ -10,17 +10,13 @@ export default function AddUser() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [active, setActive] = useState();
+  const [emailLocal, setEmailLocal] = useState(
+    localStorage.getItem("emailUser")
+  );
   const db = firebase.firestore();
 
   function handleLogin(e) {
     e.preventDefault();
-
-    console.log(name, email, active);
-    // console.log("Tipo de active:" + typeof active);
-
-    setName("");
-    setEmail("");
-    // setActive();
 
     db.collection("users")
       .doc(email)
@@ -30,15 +26,44 @@ export default function AddUser() {
         active: active,
       })
       .then((docRef) => {
-        alert("Analista cadastrado com sucesso!");
+        alert("Analista atualizado com sucesso!");
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
         alert(
-          "Erro ao cadastrar dados, por gentileza, reinicie a página e tente novamente!"
+          "Erro ao atualizar dados, por gentileza, reinicie a página e tente novamente!"
         );
       });
   }
+
+  function getPersonalData() {
+    var docRef = db.collection("users").doc(emailLocal);
+
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          const data = doc.data();
+
+          setName(data.name);
+          setEmail(data.email);
+          setActive(data.active);
+        } else {
+          // doc.data() will be undefined in this case
+          // console.log("No such document!");
+          alert(
+            "Falha ao carregar dados do analista, reinicia a página e tente novamente!"
+          );
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }
+
+  useEffect(() => {
+    getPersonalData();
+  }, []);
 
   return (
     <div className="editUserContainer">
@@ -71,32 +96,6 @@ export default function AddUser() {
                 <option value="false">Não</option>
               </select>
             </div>
-
-            {/* <div className="checkboxActive">
-              <h1 id="textAnalist">Analista ativo?</h1>
-              <div className="checkboxActiveYes">
-                <h1>Sim</h1>
-                <input
-                  name="activeCheck"
-                  value={true}
-                  type="radio"
-                  onChange={(e) => {
-                    setActive(e.target.value);
-                  }}
-                />
-              </div>
-              <div className="checkboxActiveNo">
-                <h1>Não</h1>
-                <input
-                  name="activeCheck"
-                  value={false}
-                  type="radio"
-                  onChange={(e) => {
-                    setActive(e.target.value);
-                  }}
-                />
-              </div>
-            </div> */}
             <button className="button" type="submit">
               Adicionar
             </button>
