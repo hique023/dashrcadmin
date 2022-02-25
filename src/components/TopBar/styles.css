@@ -11,3 +11,37 @@
   display: flex;
   align-items: center;
 }
+
+.TopBarContainer .startTopBar {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+}
+
+.TopBarContainer .startTopBar .back-link {
+  border: none;
+}
+
+.TopBarContainer .centerTopBar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.TopBarContainer .endTopBar {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.TopBarContainer .loggedOutStyle {
+  padding-right: 20px;
+  justify-content: end;
+  border: none;
+  background-color: var(--green);
+}

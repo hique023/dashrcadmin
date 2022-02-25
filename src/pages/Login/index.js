@@ -21,7 +21,7 @@ export default function Logon() {
       .then((userCredential) => {
         var userUid = userCredential.user.uid;
         console.log(userUid);
-        // localStorage.setItem("userUid", userUid);
+        localStorage.setItem("userUid", userUid);
         localStorage.setItem("isLogged", true);
         navigate("/home");
         // alert("Usuário logado!");

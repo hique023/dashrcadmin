@@ -10,6 +10,8 @@ import "./styles.css";
 
 export default function Home() {
   const [user, setUser] = useState({ data: [] });
+  // const [uid, setUid] = useState(localStorage.getItem("userUid"));
+  // const [uidDb, setUidDb] = useState();
 
   const db = firebase.firestore();
   const navigate = useNavigate();
@@ -22,11 +24,14 @@ export default function Home() {
   }
 
   function loginValidator() {
-    console.log(isLogged);
-    console.log(typeof isLogged);
+    // console.log(isLogged);
+    // console.log(typeof isLogged);
+    // console.log("Tipo de uid: " + typeof uid);
+    // console.log("Conteúdo de uid: " + uid);
+    // console.log("Tipo de uidDb: " + typeof uidDb);
+    // console.log("Conteúdo de uidDb: " + uidDb);
 
     if (isLogged === "true") {
-      // console.log("Está logado");
       getUser();
     } else {
       alert(
@@ -35,6 +40,26 @@ export default function Home() {
       navigate("/");
     }
   }
+
+  // function getUid() {
+  //   var docRef = db.collection("uid").doc(uid);
+
+  //   docRef
+  //     .get()
+  //     .then((doc) => {
+  //       if (doc.exists) {
+  //         const data = doc.data();
+  //         setUidDb(data.uid);
+  //       } else {
+  //         alert(
+  //           "Falha ao carregar dados do analista, reinicia a página e tente novamente!"
+  //         );
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error getting document:", error);
+  //     });
+  // }
 
   function getUser() {
     const count = [];
@@ -59,12 +84,13 @@ export default function Home() {
   }
 
   useEffect(() => {
+    // getUid();
     loginValidator();
   }, []);
 
   return (
     <div className="homeContainer">
-      <TopBar name="Home" />
+      <TopBar name="Home" back="false" />
       <form onSubmit={addUser}>
         <button className="button" type="submit">
           Adicionar Usuário
