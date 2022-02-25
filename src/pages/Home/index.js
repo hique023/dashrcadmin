@@ -14,9 +14,26 @@ export default function Home() {
   const db = firebase.firestore();
   const navigate = useNavigate();
 
+  const isLogged = localStorage.getItem("isLogged");
+
   function addUser(e) {
     e.preventDefault();
     navigate("/adduser");
+  }
+
+  function loginValidator() {
+    console.log(isLogged);
+    console.log(typeof isLogged);
+
+    if (isLogged === "true") {
+      // console.log("Está logado");
+      getUser();
+    } else {
+      alert(
+        "Houve um problema em sua autenticação, por gentileza realize seu login novamente!"
+      );
+      navigate("/");
+    }
   }
 
   function getUser() {
@@ -42,8 +59,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    getUser();
-    console.log("Teste");
+    loginValidator();
   }, []);
 
   return (
