@@ -97,7 +97,7 @@ export default function AddUser() {
               </select>
             </div>
             <button className="button" type="submit">
-              Adicionar
+              Atualizar
             </button>
           </form>
         </section>
